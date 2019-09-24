@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, height =device-height, shrink-to-fit=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>US Incarceration Mapping</title>
 
@@ -11,10 +11,13 @@
 
 
 <style>
+    
+    html {zoom: 80%;}
+    
    .mappiece {
         
          fill: #efefef;
-       stroke: "white";f
+       stroke: "white";
        stroke-width: 1;
      
     }
@@ -465,6 +468,7 @@ function draw(input_data){
         });
     
     var svg = d3.select('.heatmap')
+      .attr("preserveAspectRatio", "xMinYMin meet")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
        .append("g").attr("id","heat")
@@ -1073,8 +1077,11 @@ d3.select("#county_label").text("National Rates").style("text-align", "center");
 </script>
 
 <body onload = "getData()">
+
 <div>
 <div id = "header" >
+    
+    
     <span style = "font-size:48px" > Whom Do We Confine? </span><br>
     <span style = "font-size:24px">History of Incarcerated Peoples in the United States 1970 - 2015</span>
     
@@ -1305,6 +1312,8 @@ d3.select("#county_label").text("National Rates").style("text-align", "center");
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
     
 </body>
 
