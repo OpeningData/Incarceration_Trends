@@ -667,9 +667,8 @@ function mouseover(d, i){
 
             
   d3.select("#tooltip")
-                .style("top", d3.event.pageY + "px")
-
-                .style("left", d3.event.pageX + "px")
+                .style("top", d3.event.pageY*1.25 - 75 + "px")
+                .style("left", d3.event.pageX*1.25 - 75 + "px")
                 .style("visibility","visible");
     
 
@@ -740,8 +739,8 @@ var iis
 
             
   d3.select("#tooltip2")
-                .style("top", d3.event.pageY + "px")
-                .style("left", d3.event.pageX+ "px")
+                .style("top", d3.event.pageY*1.25 - 75 + "px")
+                .style("left", d3.event.pageX * 1.25 - 75+ "px")
                 .style("visibility","visible");
     
 
